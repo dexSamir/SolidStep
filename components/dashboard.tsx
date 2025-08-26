@@ -217,7 +217,9 @@ export function Dashboard({ user }: DashboardProps) {
                 showOnlineStatus={true}
               />
               <div>
-                <h1 className="text-xl font-bold">Okuma Takipçisi</h1>
+                <h1 className="text-xl font-bold helloworld">
+                  Okuma Takipçisi
+                </h1>
                 <p className="text-sm text-muted-foreground">
                   Hoş geldin, {user?.name || "Okuyucu"}!
                 </p>

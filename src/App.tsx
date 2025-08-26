@@ -4,6 +4,7 @@ import { Dashboard } from "../components/dashboard";
 import { AuthModal } from "../components/auth-modal";
 import { OnboardingModal } from "../components/onboarding-modal";
 import { Toaster } from "../components/ui/toaster";
+import "./index.css";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

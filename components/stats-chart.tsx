@@ -148,9 +148,7 @@ export function StatsChart() {
                     <div
                       key={i}
                       className={`aspect-square rounded-sm border-2 ${
-                        hasRead
-                          ? "bg-chart-3 border-chart-3"
-                          : "bg-muted border-border"
+                        hasRead ? "bg-chart-3 border-chart-3" : "bg-muted "
                       }`}
                       title={hasRead ? "Okuma yapıldı" : "Okuma yapılmadı"}
                     />

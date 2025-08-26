@@ -47,7 +47,7 @@ export function AuthModal({ onLogin }: AuthModalProps) {
           <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
             <BookOpen className="h-8 w-8 text-primary" />
           </div>
-          <CardTitle className="text-2xl">Okuma Takipçisi</CardTitle>
+          <CardTitle className="text-2xl helloworld">Okuma Takipçisi</CardTitle>
           <CardDescription>
             {isLogin ? "Hesabına giriş yap" : "Yeni hesap oluştur"}
           </CardDescription>
