@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #4b5563;
+  --card: #f9fafb;
+  --card-foreground: #4b5563;
+  --popover: #ffffff;
+  --popover-foreground: #4b5563;
+  --primary: #0891b2;
+  --primary-foreground: #ffffff;
+  --secondary: #8b5cf6;
+  --secondary-foreground: #ffffff;
+  --muted: #f9fafb;
+  --muted-foreground: #6b7280;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #f1f5f9;
+  --ring: #60a5fa;
+  --chart-1: #3b82f6;
+  --chart-2: #fbbf24;
+  --chart-3: #34d399;
+  --chart-4: #f472b6;
+  --chart-5: #9333ea;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: #1f2937;
+  --foreground: #f9fafb;
+  --card: #374151;
+  --card-foreground: #f9fafb;
+  --popover: #374151;
+  --popover-foreground: #f9fafb;
+  --primary: #06b6d4;
+  --primary-foreground: #ffffff;
+  --secondary: #a855f7;
+  --secondary-foreground: #ffffff;
+  --muted: #4b5563;
+  --muted-foreground: #9ca3af;
+  --accent: #a855f7;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #4b5563;
+  --input: #374151;
+  --ring: #3b82f6;
+  --chart-1: #60a5fa;
+  --chart-2: #fcd34d;
+  --chart-3: #4ade80;
+  --chart-4: #f472b6;
+  --chart-5: #a78bfa;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations for gamification elements */
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px hsl(var(--accent));
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--accent)), 0 0 30px hsl(var(--accent));
+  }
+}
+
+@keyframes streak-fire {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.6s ease-out;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-streak-fire {
+  animation: streak-fire 1s ease-in-out infinite;
+}
