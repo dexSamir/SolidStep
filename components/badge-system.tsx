@@ -34,7 +34,7 @@ export interface EarnedBadge {
 const BADGE_DEFINITIONS: BadgeDefinition[] = [
   {
     id: "first_book",
-    name: "İlk Kitap",
+    name: "İlk Kitab",
     description: "İlk kitabını bitir",
     icon: <BookOpen className="h-4 w-4" />,
     condition: (stats) => stats.booksRead >= 1,
@@ -43,8 +43,8 @@ const BADGE_DEFINITIONS: BadgeDefinition[] = [
   },
   {
     id: "streak_10",
-    name: "10 Günlük Seri",
-    description: "10 gün üst üste oku",
+    name: "10 Gunluk Streak",
+    description: "10 gun ust-uste oxu",
     icon: <Flame className="h-4 w-4" />,
     condition: (stats) => stats.streak >= 10,
     xpReward: 200,
@@ -52,8 +52,8 @@ const BADGE_DEFINITIONS: BadgeDefinition[] = [
   },
   {
     id: "night_reader",
-    name: "Gece Okuyucusu",
-    description: "Saat 22:00'dan sonra okuma kaydet",
+    name: "Gece Oxucu",
+    description: "Saat 22:00'dan sonra oxu",
     icon: <Moon className="h-4 w-4" />,
     condition: (stats) => stats.nightReadingSessions >= 1,
     xpReward: 150,
@@ -61,8 +61,8 @@ const BADGE_DEFINITIONS: BadgeDefinition[] = [
   },
   {
     id: "pages_1000",
-    name: "1000 Sayfa",
-    description: "Toplam 1000 sayfa oku",
+    name: "1000 Sehife",
+    description: "Toplam 1000 sehife oxu",
     icon: <Target className="h-4 w-4" />,
     condition: (stats) => stats.pagesRead >= 1000,
     xpReward: 300,
@@ -70,8 +70,8 @@ const BADGE_DEFINITIONS: BadgeDefinition[] = [
   },
   {
     id: "speed_reader",
-    name: "Hızlı Okuyucu",
-    description: "Bir günde 100+ sayfa oku",
+    name: "Suretli Oxucu",
+    description: "Bir günde 100+ sehife oxu",
     icon: <Clock className="h-4 w-4" />,
     condition: (stats) => stats.maxDailyPages >= 100,
     xpReward: 250,
@@ -79,8 +79,8 @@ const BADGE_DEFINITIONS: BadgeDefinition[] = [
   },
   {
     id: "consistent_reader",
-    name: "Düzenli Okuyucu",
-    description: "30 gün üst üste oku",
+    name: "Muntezem Oxucu",
+    description: "30 gun ust-uste oxu",
     icon: <Star className="h-4 w-4" />,
     condition: (stats) => stats.streak >= 30,
     xpReward: 500,
@@ -116,7 +116,7 @@ export function BadgeSystem({
       if (!alreadyEarned && badge.condition(userStats)) {
         onBadgeEarned(badge);
         toast({
-          title: "🏆 Yeni Rozet Kazandın!",
+          title: "🏆 Yeni medal qazandin!",
           description: `${badge.name} - ${badge.description}`,
         });
       }
@@ -138,10 +138,10 @@ export function BadgeGallery({
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-bold flex items-center gap-2">
           <Trophy className="h-6 w-6 text-accent" />
-          Rozet Galerisi
+          Medallar
         </h2>
         <Badge variant="secondary">
-          {earnedBadges.length}/{BADGE_DEFINITIONS.length} Kazanıldı
+          {earnedBadges.length}/{BADGE_DEFINITIONS.length} Qazanildi
         </Badge>
       </div>
 
@@ -219,12 +219,12 @@ export function RecentAwards({
         <CardHeader>
           <CardTitle className="text-base flex items-center gap-2">
             <Award className="h-4 w-4 text-accent" />
-            Son Kazanılan Rozetler
+            Son Qazanilan Medallar
           </CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground">
-            Henüz rozet kazanmadın. Okumaya devam et!
+            Hələ heç bir medal qazanılmayıb. Kitab oxumağa başlayın.
           </p>
         </CardContent>
       </Card>
@@ -236,7 +236,7 @@ export function RecentAwards({
       <CardHeader>
         <CardTitle className="text-base flex items-center gap-2">
           <Award className="h-4 w-4 text-accent" />
-          Son Kazanılan Rozetler
+          Son Qazanilan Medallar
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-3">

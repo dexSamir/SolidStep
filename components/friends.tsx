@@ -21,33 +21,23 @@ interface Friend {
 const mockFriends: Friend[] = [
   {
     id: 1,
-    name: "Ayşe Yılmaz",
+    name: "Samir Hebibov",
     avatar: "/friendly-book-reader-avatar-1.png",
-    streak: 15,
-    booksRead: 8,
+    streak: 100,
+    booksRead: 7,
     currentBook: "1984",
     level: 6,
     isOnline: true,
   },
   {
     id: 2,
-    name: "Mehmet Kaya",
+    name: "Dexter Morgan",
     avatar: "/studious-person-with-glasses-avatar.png",
     streak: 22,
     booksRead: 12,
-    currentBook: "Suç ve Ceza",
+    currentBook: "Cinayet ve Ceza",
     level: 8,
     isOnline: false,
-  },
-  {
-    id: 3,
-    name: "Fatma Demir",
-    avatar: "/young-reader-with-book-avatar.png",
-    streak: 8,
-    booksRead: 5,
-    currentBook: "Savaş ve Barış",
-    level: 4,
-    isOnline: true,
   },
 ];
 
@@ -59,8 +49,8 @@ export function Friends() {
   const handleAddFriend = () => {
     if (searchQuery.trim()) {
       toast({
-        title: "Dost sorğusu göndərildi! 👥",
-        description: `${searchQuery} istifadəçisinə dost sorğusu göndərildi.`,
+        title: "Dost sorgusu gonderildi! 👥",
+        description: `${searchQuery} istifadecisine dost sorgusu gonderildi.`,
       });
       setSearchQuery("");
     }
@@ -76,7 +66,7 @@ export function Friends() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <UserPlus className="h-5 w-5 text-primary" />
-            Dost Əlavə Et
+            Dost Elave Et
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -84,7 +74,7 @@ export function Friends() {
             <div className="relative flex-1">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
-                placeholder="İstifadəçi adı və ya email..."
+                placeholder="Istifadeci adi ve ya email..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -92,7 +82,7 @@ export function Friends() {
             </div>
             <Button onClick={handleAddFriend} disabled={!searchQuery.trim()}>
               <UserPlus className="h-4 w-4 mr-2" />
-              Əlavə Et
+              Elave Et
             </Button>
           </div>
         </CardContent>
@@ -102,7 +92,7 @@ export function Friends() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-5 w-5 text-chart-2" />
-            Dostlarım ({friends.length})
+            Dostlarim ({friends.length})
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -135,7 +125,7 @@ export function Friends() {
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="flex items-center gap-2">
                         <Flame className="h-4 w-4 text-accent" />
-                        <span>{friend.streak} gün streak</span>
+                        <span>{friend.streak} gun streak</span>
                       </div>
                       <div className="flex items-center gap-2">
                         <BookOpen className="h-4 w-4 text-chart-3" />
@@ -145,7 +135,7 @@ export function Friends() {
 
                     {friend.currentBook && (
                       <div className="p-2 bg-muted/50 rounded text-sm">
-                        <p className="text-muted-foreground">Hazırda oxuyur:</p>
+                        <p className="text-muted-foreground">Hazirda oxuyur:</p>
                         <p className="font-medium">{friend.currentBook}</p>
                       </div>
                     )}
@@ -157,9 +147,9 @@ export function Friends() {
             {filteredFriends.length === 0 && (
               <div className="text-center py-8 text-muted-foreground">
                 <Users className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                <p>Hələ dostunuz yoxdur</p>
+                <p>Heleki dostunuz yoxdur </p>
                 <p className="text-sm">
-                  Yuxarıdakı axtarış sahəsindən dost əlavə edin
+                  Yuxaridaki axtaris sahesinden dost elave edin
                 </p>
               </div>
             )}

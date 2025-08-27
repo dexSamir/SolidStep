@@ -106,8 +106,8 @@ export function AvatarUpload({
 
     if (!file.type.startsWith("image/")) {
       toast({
-        title: "Geçersiz dosya",
-        description: "Lütfen bir resim dosyası seçin.",
+        title: "UnSupported file type",
+        description: "Xahis olunur sekil tipinde fayl secin.",
         variant: "destructive",
       });
       return;
@@ -115,8 +115,8 @@ export function AvatarUpload({
 
     if (file.size > 5 * 1024 * 1024) {
       toast({
-        title: "Dosya çok büyük",
-        description: "Lütfen 5MB'dan küçük bir resim seçin.",
+        title: "File too large",
+        description: "Fayl olcusu maksimum 5MB ola biler.",
         variant: "destructive",
       });
       return;
@@ -134,8 +134,8 @@ export function AvatarUpload({
   const handleSave = () => {
     onAvatarChange(selectedAvatar);
     toast({
-      title: "Avatar güncellendi! 🎉",
-      description: "Profil resmin başarıyla değiştirildi.",
+      title: "Avatar yenilendi 🎉",
+      description: "Profil resminiz ugurla yenilendi.",
     });
     onClose();
   };
@@ -146,14 +146,14 @@ export function AvatarUpload({
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Camera className="h-5 w-5" />
-            Avatar Seç
+            Avatar Sec
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="flex items-center gap-4 p-4 bg-accent/5 rounded-lg">
             <UserAvatar src={selectedAvatar} name={userName} size="xl" />
             <div>
-              <p className="font-medium">Seçili Avatar</p>
+              <p className="font-medium">Secili Avatar</p>
               <p className="text-sm text-muted-foreground">
                 {selectedAvatar ? "Avatar seçildi" : "Avatar seçilmedi"}
               </p>
@@ -161,7 +161,7 @@ export function AvatarUpload({
           </div>
 
           <div className="space-y-3">
-            <h3 className="font-medium">Kendi Resmini Yükle</h3>
+            <h3 className="font-medium">Oz Resminizi Yukleyin</h3>
             <div className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center">
               <input
                 ref={fileInputRef}
@@ -172,7 +172,7 @@ export function AvatarUpload({
               />
               <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
               <p className="text-sm text-muted-foreground mb-3">
-                Resim yüklemek için tıkla veya sürükle
+                Sekil yuklemek ucun klikleyin ve ya surusdurun.
               </p>
               <Button
                 variant="outline"
@@ -180,10 +180,10 @@ export function AvatarUpload({
                 className="gap-2"
               >
                 <Upload className="h-4 w-4" />
-                Resim Seç
+                Resim Sec
               </Button>
               <p className="text-xs text-muted-foreground mt-2">
-                PNG, JPG veya GIF • Maksimum 5MB
+                PNG ve ya JPG • Maksimum 5MB
               </p>
             </div>
           </div>
@@ -214,14 +214,14 @@ export function AvatarUpload({
 
           <div className="flex gap-3 pt-4">
             <Button onClick={handleSave} className="flex-1">
-              Kaydet
+              Yadda Saxla
             </Button>
             <Button
               variant="outline"
               onClick={onClose}
               className="flex-1 bg-transparent"
             >
-              İptal
+              Legv Et
             </Button>
           </div>
         </CardContent>
@@ -264,7 +264,7 @@ export function AvatarManager({
             className="w-full gap-2"
           >
             <Camera className="h-4 w-4" />
-            Avatar Değiştir
+            Avatar Deyisdir
           </Button>
         </CardContent>
       </Card>

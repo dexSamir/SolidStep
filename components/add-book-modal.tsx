@@ -48,19 +48,19 @@ export function AddBookModal({ onAdd, onClose }: AddBookModalProps) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Plus className="h-5 w-5 text-primary" />
-              <CardTitle>Yeni Kitap Ekle</CardTitle>
+              <CardTitle>Yeni Kitab Elave Et</CardTitle>
             </div>
             <Button variant="ghost" size="sm" onClick={onClose}>
               <X className="h-4 w-4" />
             </Button>
           </div>
-          <CardDescription>Okuma listene yeni bir kitap ekle</CardDescription>
+          <CardDescription>Oxuma siyahisina elave et</CardDescription>
         </CardHeader>
 
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="title">Kitap Adı</Label>
+              <Label htmlFor="title">Kitab adi</Label>
               <Input
                 id="title"
                 placeholder="Örn: Cinayet ve Ceza"
@@ -86,7 +86,7 @@ export function AddBookModal({ onAdd, onClose }: AddBookModalProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="pages">Toplam Sayfa Sayısı</Label>
+              <Label htmlFor="pages">Toplam Sehife Sayi</Label>
               <Input
                 id="pages"
                 type="number"
@@ -104,7 +104,7 @@ export function AddBookModal({ onAdd, onClose }: AddBookModalProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="deadline">Hedef Bitiş Tarihi</Label>
+              <Label htmlFor="deadline">Hedef Bitis Tarixi</Label>
               <Input
                 id="deadline"
                 type="date"
@@ -123,10 +123,10 @@ export function AddBookModal({ onAdd, onClose }: AddBookModalProps) {
                 onClick={onClose}
                 className="flex-1 bg-transparent"
               >
-                İptal
+                Legv et
               </Button>
               <Button type="submit" className="flex-1">
-                Kitap Ekle
+                Elave et
               </Button>
             </div>
           </form>

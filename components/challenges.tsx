@@ -33,13 +33,13 @@ interface Challenge {
 const mockChallenges: Challenge[] = [
   {
     id: 1,
-    title: "Mart Ayı Səhifə Çağırışı",
-    description: "Bu ay 300 səhifə oxuyun və ödülünüzü qazanın!",
+    title: "Mart Ayi Sehife Cagirisi",
+    description: "Bu ay 300 sehife oxuyun və mukafatinizi qazanin!",
     type: "monthly",
     target: 300,
     current: 145,
-    unit: "səhifə",
-    reward: "Aylık Okuyucu rozeti",
+    unit: "sehife",
+    reward: "Ayliq Oxucu medali",
     xpReward: 500,
     deadline: "2024-03-31",
     participants: 1247,
@@ -48,13 +48,13 @@ const mockChallenges: Challenge[] = [
   },
   {
     id: 2,
-    title: "7 Günlük Kitab Çağırışı",
-    description: "Bir kitabı 7 günə bitirin və hızlı okuyucu olun!",
+    title: "7 Gunluk Kitab Cagirisi",
+    description: "Bir kitabi 7 gune bitirin və suretli oxucu olun!",
     type: "weekly",
     target: 1,
     current: 0,
     unit: "kitab",
-    reward: "Hızlı Okuyucu rozeti",
+    reward: "Suretli Oxucu medali",
     xpReward: 300,
     deadline: "2024-03-15",
     participants: 523,
@@ -63,14 +63,14 @@ const mockChallenges: Challenge[] = [
   },
   {
     id: 3,
-    title: "Klassik Edebiyat Həftəsi",
+    title: "Klassik Edebiyyat Heftesi",
     description:
-      "Bu həftə klassik bir əsər oxuyun və kültürünüzü zənginləşdirin!",
+      "Bu hefte klassik bir eser oxuyun ve dunyagorusunuzu zenginlesdirin!",
     type: "special",
     target: 1,
     current: 1,
     unit: "klassik kitab",
-    reward: "Klassik Həvəskarı rozeti",
+    reward: "Klassik Heveskari medali",
     xpReward: 400,
     deadline: "2024-03-10",
     participants: 892,
@@ -97,8 +97,8 @@ export function Challenges() {
     );
 
     toast({
-      title: "Çağırışa qatıldınız! 🎯",
-      description: "Uğurlar! İndi proqresinizi izləyə bilərsiniz.",
+      title: "Cagirisa qatildiniz! 🎯",
+      description: "Ugurlar! İndi proqresinizi izleye bilersiniz.",
     });
   };
 
@@ -122,13 +122,13 @@ export function Challenges() {
   const getTypeLabel = (type: string) => {
     switch (type) {
       case "monthly":
-        return "Aylıq";
+        return "Ayliq";
       case "weekly":
-        return "Həftəlik";
+        return "Heftelik";
       case "special":
-        return "Xüsusi";
+        return "Xususi";
       default:
-        return "Çağırış";
+        return "Cagiris";
     }
   };
 
@@ -146,7 +146,7 @@ export function Challenges() {
         <div>
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
             <Zap className="h-5 w-5 text-accent" />
-            Aktiv Çağırışlar
+            Aktiv Cagirislar
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {activechallenges.map((challenge) => (
@@ -160,7 +160,7 @@ export function Challenges() {
                       </Badge>
                     </div>
                     <Badge variant="outline" className="text-xs">
-                      {challenge.participants} iştirakçı
+                      {challenge.participants} istirakci
                     </Badge>
                   </div>
                   <CardTitle className="text-base">{challenge.title}</CardTitle>
@@ -212,7 +212,7 @@ export function Challenges() {
         <div>
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
             <Target className="h-5 w-5 text-primary" />
-            Mövcud Çağırışlar
+            Movcud Cagirislar
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {availableChallenges.map((challenge) => (
@@ -229,7 +229,7 @@ export function Challenges() {
                       </Badge>
                     </div>
                     <Badge variant="outline" className="text-xs">
-                      {challenge.participants} iştirakçı
+                      {challenge.participants} istirakci
                     </Badge>
                   </div>
                   <CardTitle className="text-base">{challenge.title}</CardTitle>
@@ -261,7 +261,7 @@ export function Challenges() {
                       className="h-8"
                     >
                       <Users className="h-3 w-3 mr-1" />
-                      Qatıl
+                      Qatil
                     </Button>
                   </div>
                 </CardContent>
@@ -275,7 +275,7 @@ export function Challenges() {
         <div>
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
             <Trophy className="h-5 w-5 text-chart-3" />
-            Tamamlanmış Çağırışlar
+            Tamamlanmamis Cagirislar
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {completedChallenges.map((challenge) => (
@@ -291,7 +291,7 @@ export function Challenges() {
                         variant="secondary"
                         className="bg-chart-3/20 text-chart-3"
                       >
-                        Tamamlandı
+                        Tamamlandi
                       </Badge>
                     </div>
                     <Trophy className="h-5 w-5 text-chart-3" />
@@ -306,7 +306,7 @@ export function Challenges() {
                   <div className="space-y-2">
                     <Progress value={100} className="h-2" />
                     <div className="text-sm text-chart-3 font-medium">
-                      ✓ {challenge.target} {challenge.unit} tamamlandı
+                      ✓ {challenge.target} {challenge.unit} tamamlandi
                     </div>
                   </div>
 

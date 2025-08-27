@@ -93,7 +93,7 @@ export function Dashboard({ user }: DashboardProps) {
     },
     {
       id: 2,
-      title: "Savaş ve Barış",
+      title: "Muharibe ve Sulh",
       author: "Lev Tolstoy",
       totalPages: 1225,
       currentPage: 1225,
@@ -105,7 +105,7 @@ export function Dashboard({ user }: DashboardProps) {
   const { toast } = useToast();
 
   const dailyInspiration = [
-    "Bugün okuduğun her sayfa, yarının daha bilgili seni için bir adım!",
+    "Bugun oxudung her sehife, sabahin daha bilgili seni ucun bir addimdir!",
     "Kitaplar, ruhun için en iyi besin kaynağıdır.",
     "Her okuma seansı, zihnini genişletir ve hayal gücünü besler.",
     "Okumak, zamanla yarışmak değil, kendini geliştirmektir.",
@@ -183,8 +183,8 @@ export function Dashboard({ user }: DashboardProps) {
     });
 
     toast({
-      title: "Harika! 🎉",
-      description: `${pages} sayfa okudun ve ${pages * 10} XP kazandın!`,
+      title: "Mukemmel! 🎉",
+      description: `${pages} sehife oxudun ve ${pages * 10} XP qazandin!`,
     });
 
     setShowDailyLog(false);
@@ -211,17 +211,17 @@ export function Dashboard({ user }: DashboardProps) {
             <div className="flex items-center gap-3">
               <UserAvatar
                 src={userAvatar}
-                name={user?.name || "Okuyucu"}
+                name={user?.name || "Oxucu"}
                 size="lg"
                 level={currentLevel}
                 showOnlineStatus={true}
               />
               <div>
                 <h1 className="text-xl font-bold helloworld">
-                  Okuma Takipçisi
+                  Oxuma Izleyicisi
                 </h1>
                 <p className="text-sm text-muted-foreground">
-                  Hoş geldin, {user?.name || "Okuyucu"}!
+                  Xos geldin, {user?.name || "Oxucu"}!
                 </p>
               </div>
             </div>
@@ -229,7 +229,7 @@ export function Dashboard({ user }: DashboardProps) {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 bg-accent/10 px-3 py-2 rounded-lg">
                 <Flame className="h-4 w-4 text-accent animate-streak-fire" />
-                <span className="font-semibold">{userStats.streak} gün</span>
+                <span className="font-semibold">{userStats.streak} gun</span>
               </div>
 
               <div className="flex items-center gap-3">
@@ -257,7 +257,6 @@ export function Dashboard({ user }: DashboardProps) {
       </header>
 
       <div className="container mx-auto px-4 py-6">
-        {/* Inspiration Card */}
         <Card className="mb-6 bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
@@ -274,7 +273,7 @@ export function Dashboard({ user }: DashboardProps) {
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
                 <TrendingUp className="h-4 w-4 text-chart-1" />
-                Seviye İlerlemesi
+                Seviye Irelilemesi
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -297,14 +296,14 @@ export function Dashboard({ user }: DashboardProps) {
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
                 <Flame className="h-4 w-4 text-accent" />
-                Okuma Serisi
+                Oxuma Streak
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-accent">
                 {userStats.streak}
               </div>
-              <p className="text-xs text-muted-foreground">Ardışık gün</p>
+              <p className="text-xs text-muted-foreground">Ardicil gun</p>
             </CardContent>
           </Card>
 
@@ -312,14 +311,14 @@ export function Dashboard({ user }: DashboardProps) {
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
                 <BookOpen className="h-4 w-4 text-chart-3" />
-                Okunan Kitaplar
+                Oxunan Kitablar
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-chart-3">
                 {userStats.booksRead}
               </div>
-              <p className="text-xs text-muted-foreground">Bu yıl</p>
+              <p className="text-xs text-muted-foreground">Bu Il</p>
             </CardContent>
           </Card>
 
@@ -327,7 +326,7 @@ export function Dashboard({ user }: DashboardProps) {
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium flex items-center gap-2">
                 <Target className="h-4 w-4 text-chart-2" />
-                Yıllık Hedef
+                Illik Hedef
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -347,12 +346,12 @@ export function Dashboard({ user }: DashboardProps) {
         <Tabs defaultValue="dashboard" className="space-y-4">
           <TabsList className="grid w-full grid-cols-8">
             <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
-            <TabsTrigger value="books">Kitaplarım</TabsTrigger>
-            <TabsTrigger value="challenges">Çağırışlar</TabsTrigger>
+            <TabsTrigger value="books">Kitablarim</TabsTrigger>
+            <TabsTrigger value="challenges">Cagirislar</TabsTrigger>
             <TabsTrigger value="social">Sosial</TabsTrigger>
-            <TabsTrigger value="badges">Rozetler</TabsTrigger>
-            <TabsTrigger value="stats">İstatistikler</TabsTrigger>
-            <TabsTrigger value="calendar">Takvim</TabsTrigger>
+            <TabsTrigger value="badges">Medallar</TabsTrigger>
+            <TabsTrigger value="stats">Statistikalar</TabsTrigger>
+            <TabsTrigger value="calendar">Teqvim</TabsTrigger>
             <TabsTrigger value="profile">Profil</TabsTrigger>
           </TabsList>
 
@@ -360,10 +359,12 @@ export function Dashboard({ user }: DashboardProps) {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               <div className="lg:col-span-2 space-y-4">
                 <div className="flex items-center justify-between">
-                  <h2 className="text-lg font-semibold">Şu An Okuduklarım</h2>
+                  <h2 className="text-lg font-semibold">
+                    Hal-hazirda Oxuduglarim
+                  </h2>
                   <Button onClick={() => setShowAddBook(true)} size="sm">
                     <Plus className="h-4 w-4 mr-2" />
-                    Kitap Ekle
+                    Kitab Elave Et
                   </Button>
                 </div>
 
@@ -378,7 +379,7 @@ export function Dashboard({ user }: DashboardProps) {
                 <div className="mt-6">
                   <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                     <Zap className="h-5 w-5 text-chart-2" />
-                    Günlük Tapşırıqlar
+                    Gunluk Tapsiriglar
                   </h2>
                   <Quests />
                 </div>
@@ -387,7 +388,9 @@ export function Dashboard({ user }: DashboardProps) {
               <div className="space-y-4">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="text-base">Hızlı İşlemler</CardTitle>
+                    <CardTitle className="text-base">
+                      Suretli Emeliyyatlar
+                    </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-2">
                     <Button
@@ -396,7 +399,7 @@ export function Dashboard({ user }: DashboardProps) {
                       variant="outline"
                     >
                       <BookOpen className="h-4 w-4 mr-2" />
-                      Günlük Okuma Kaydet
+                      Gunluk Oxuma Qeyd Et
                     </Button>
                     <Button
                       onClick={() => setShowAddBook(true)}
@@ -404,7 +407,7 @@ export function Dashboard({ user }: DashboardProps) {
                       variant="outline"
                     >
                       <Plus className="h-4 w-4 mr-2" />
-                      Yeni Kitap Ekle
+                      Yeni Kitab Elave Et
                     </Button>
                   </CardContent>
                 </Card>
@@ -416,10 +419,10 @@ export function Dashboard({ user }: DashboardProps) {
 
           <TabsContent value="books" className="space-y-4">
             <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold">Tüm Kitaplarım</h2>
+              <h2 className="text-lg font-semibold">Butun Kitablarim</h2>
               <Button onClick={() => setShowAddBook(true)}>
                 <Plus className="h-4 w-4 mr-2" />
-                Kitap Ekle
+                Kitab Elave Et
               </Button>
             </div>
 
@@ -435,14 +438,14 @@ export function Dashboard({ user }: DashboardProps) {
               <div>
                 <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Target className="h-5 w-5 text-primary" />
-                  Çağırışlar
+                  Cagirislar
                 </h2>
                 <Challenges />
               </div>
               <div>
                 <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Zap className="h-5 w-5 text-chart-2" />
-                  Tapşırıqlar
+                  Tapsiriglar
                 </h2>
                 <Quests />
               </div>
@@ -481,11 +484,9 @@ export function Dashboard({ user }: DashboardProps) {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <CalendarIcon className="h-5 w-5" />
-                  Okuma Takvimi
+                  Oxuma Teqvimi
                 </CardTitle>
-                <CardDescription>
-                  Okuma alışkanlığınızı takip edin
-                </CardDescription>
+                <CardDescription>Oxuma alisqanliginizi izleyin</CardDescription>
               </CardHeader>
               <CardContent>
                 <Calendar
@@ -503,7 +504,7 @@ export function Dashboard({ user }: DashboardProps) {
               <div className="lg:col-span-1">
                 <AvatarManager
                   currentAvatar={userAvatar}
-                  userName={user?.name || "Okuyucu"}
+                  userName={user?.name || "Oxucu"}
                   onAvatarChange={setUserAvatar}
                 />
               </div>
@@ -511,13 +512,13 @@ export function Dashboard({ user }: DashboardProps) {
               <div className="lg:col-span-2 space-y-4">
                 <Card>
                   <CardHeader>
-                    <CardTitle>Profil Bilgileri</CardTitle>
+                    <CardTitle>Profil Melumatlari</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div>
                         <p className="text-sm text-muted-foreground">İsim</p>
-                        <p className="font-medium">{user?.name || "Okuyucu"}</p>
+                        <p className="font-medium">{user?.name || "Oxucu"}</p>
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Seviye</p>
@@ -525,30 +526,30 @@ export function Dashboard({ user }: DashboardProps) {
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">
-                          Toplam XP
+                          Umumi XP
                         </p>
                         <p className="font-medium">{userStats.xp} XP</p>
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">
-                          Okuma Serisi
+                          Oxuma Seriyasi
                         </p>
-                        <p className="font-medium">{userStats.streak} gün</p>
+                        <p className="font-medium">{userStats.streak} gun</p>
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">
-                          Okunan Kitaplar
+                          Oxunan Kitablar
                         </p>
                         <p className="font-medium">
-                          {userStats.booksRead} kitap
+                          {userStats.booksRead} kitab
                         </p>
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">
-                          Toplam Sayfa
+                          Umumi Sehife
                         </p>
                         <p className="font-medium">
-                          {userStats.pagesRead} sayfa
+                          {userStats.pagesRead} sehife
                         </p>
                       </div>
                     </div>
@@ -557,7 +558,7 @@ export function Dashboard({ user }: DashboardProps) {
 
                 <Card>
                   <CardHeader>
-                    <CardTitle>Kazanılan Rozetler</CardTitle>
+                    <CardTitle>Qazanilan Medallar</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
@@ -597,8 +598,8 @@ export function Dashboard({ user }: DashboardProps) {
             setBooks((prev) => [...prev, { ...book, id: Date.now() }]);
             setShowAddBook(false);
             toast({
-              title: "Kitap eklendi! 📚",
-              description: `${book.title} kitabın listene eklendi.`,
+              title: "Kitab elave olundu! 📚",
+              description: `${book.title} kitabın siyanina elave edildi.`,
             });
           }}
           onClose={() => setShowAddBook(false)}

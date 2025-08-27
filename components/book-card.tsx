@@ -39,13 +39,13 @@ export function BookCard({ book }: BookCardProps) {
   const getStatusText = (status: string) => {
     switch (status) {
       case "completed":
-        return "Tamamlandı";
+        return "Tamamlandi";
       case "reading":
-        return "Okunuyor";
+        return "Oxunur";
       case "paused":
-        return "Duraklatıldı";
+        return "Dayandirilib";
       default:
-        return "Bilinmiyor";
+        return "Bilinmir";
     }
   };
 
@@ -73,15 +73,15 @@ export function BookCard({ book }: BookCardProps) {
           <div className="flex justify-between text-sm">
             <span className="flex items-center gap-1">
               <BookOpen className="h-3 w-3" />
-              İlerleme
+              Irelileyis
             </span>
             <span className="font-medium">
-              {book.currentPage}/{book.totalPages} sayfa
+              {book.currentPage}/{book.totalPages} sehife
             </span>
           </div>
           <Progress value={progress} className="h-2" />
           <p className="text-xs text-muted-foreground">
-            %{Math.round(progress)} tamamlandı
+            %{Math.round(progress)} tamamlandi
           </p>
         </div>
 
@@ -89,14 +89,14 @@ export function BookCard({ book }: BookCardProps) {
           <div className="flex items-center justify-between text-sm">
             <span className="flex items-center gap-1 text-muted-foreground">
               <Calendar className="h-3 w-3" />
-              Hedef tarih
+              Hedef tarix
             </span>
             <span
               className={`font-medium ${
                 daysLeft < 7 ? "text-destructive" : "text-foreground"
               }`}
             >
-              {daysLeft > 0 ? `${daysLeft} gün kaldı` : "Süre doldu"}
+              {daysLeft > 0 ? `${daysLeft} gun qaldi` : "Vaxt doldu"}
             </span>
           </div>
         )}
@@ -108,10 +108,10 @@ export function BookCard({ book }: BookCardProps) {
               variant="outline"
               className="flex-1 bg-transparent"
             >
-              İlerleme Kaydet
+              Irelileme Yadda Saxla
             </Button>
             <Button size="sm" variant="outline">
-              Düzenle
+              Duzelis Et
             </Button>
           </div>
         )}

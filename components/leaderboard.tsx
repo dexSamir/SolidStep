@@ -16,12 +16,12 @@ interface LeaderboardUser {
 const mockLeaderboardData: LeaderboardUser[] = [
   {
     id: 1,
-    name: "Ayşe Yılmaz",
+    name: "Samir Hebibov",
     avatar: "/wise-librarian-avatar.png",
-    streak: 45,
-    booksRead: 23,
+    streak: 100,
+    booksRead: 7,
     pagesRead: 8450,
-    level: 12,
+    level: 6,
   },
   {
     id: 2,
@@ -85,7 +85,7 @@ export function Leaderboard() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Flame className="h-5 w-5 text-accent" />
-            Ən Uzun Streak
+            En Uzun Streak
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -117,7 +117,7 @@ export function Leaderboard() {
                     variant="secondary"
                     className="bg-accent/10 text-accent"
                   >
-                    {user.streak} gün
+                    {user.streak} gun
                   </Badge>
                 </div>
               ))}
@@ -129,7 +129,7 @@ export function Leaderboard() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-chart-3" />
-            Ən Çox Kitab Oxuyan
+            En Cox Kitab Oxuyan
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -173,7 +173,7 @@ export function Leaderboard() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Target className="h-5 w-5 text-chart-1" />
-            Ən Çox Səhifə Oxuyan
+            En Cox Sehife Oxuyan
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -205,7 +205,7 @@ export function Leaderboard() {
                     variant="secondary"
                     className="bg-chart-1/10 text-chart-1"
                   >
-                    {user.pagesRead.toLocaleString()} səhifə
+                    {user.pagesRead.toLocaleString()} sehife
                   </Badge>
                 </div>
               ))}

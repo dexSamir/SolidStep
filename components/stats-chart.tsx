@@ -21,22 +21,22 @@ import { InsightsDashboard } from "./advanced-analytics";
 import { TrendingUp, BarChart3 } from "lucide-react";
 
 const weeklyData = [
-  { day: "Pzt", pages: 45, time: 60 },
-  { day: "Sal", pages: 32, time: 45 },
-  { day: "Çar", pages: 28, time: 40 },
-  { day: "Per", pages: 52, time: 70 },
-  { day: "Cum", pages: 38, time: 50 },
-  { day: "Cmt", pages: 65, time: 85 },
-  { day: "Paz", pages: 42, time: 55 },
+  { day: "Mon", pages: 45, time: 60 },
+  { day: "Tue", pages: 32, time: 45 },
+  { day: "Wed", pages: 28, time: 40 },
+  { day: "Thu", pages: 52, time: 70 },
+  { day: "Fri", pages: 38, time: 50 },
+  { day: "Sat", pages: 65, time: 85 },
+  { day: "Sun", pages: 42, time: 55 },
 ];
 
 const monthlyData = [
-  { month: "Oca", books: 2, pages: 580 },
-  { month: "Şub", books: 1, pages: 420 },
+  { month: "yan", books: 2, pages: 580 },
+  { month: "Fev", books: 1, pages: 420 },
   { month: "Mar", books: 3, pages: 750 },
-  { month: "Nis", books: 2, pages: 640 },
+  { month: "Apr", books: 2, pages: 640 },
   { month: "May", books: 4, pages: 920 },
-  { month: "Haz", books: 2, pages: 580 },
+  { month: "Iyun", books: 2, pages: 580 },
 ];
 
 export function StatsChart() {
@@ -46,11 +46,11 @@ export function StatsChart() {
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="overview" className="flex items-center gap-2">
             <BarChart3 className="h-4 w-4" />
-            Genel Bakış
+            Umumi Baxis
           </TabsTrigger>
           <TabsTrigger value="insights" className="flex items-center gap-2">
             <TrendingUp className="h-4 w-4" />
-            İçgörüler
+            Analizler
           </TabsTrigger>
         </TabsList>
 
@@ -58,16 +58,16 @@ export function StatsChart() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <Card>
               <CardHeader>
-                <CardTitle>Haftalık Okuma İstatistikleri</CardTitle>
+                <CardTitle>Heftelik Oxu Analizi</CardTitle>
                 <CardDescription>
-                  Son 7 günde okuduğun sayfa sayısı
+                  Son 7 gunde oxudugun sehife sayi
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ChartContainer
                   config={{
                     pages: {
-                      label: "Sayfa",
+                      label: "Sehife",
                       color: "hsl(var(--chart-1))",
                     },
                   }}
@@ -92,20 +92,20 @@ export function StatsChart() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Aylık İlerleme</CardTitle>
+                <CardTitle>Ayliq Irelileme</CardTitle>
                 <CardDescription>
-                  Aylık kitap ve sayfa istatistikleri
+                  Ayliq kitab ve sehife statistikleri
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <ChartContainer
                   config={{
                     books: {
-                      label: "Kitap",
+                      label: "Kitab",
                       color: "hsl(var(--chart-2))",
                     },
                     pages: {
-                      label: "Sayfa",
+                      label: "Sehife",
                       color: "hsl(var(--chart-3))",
                     },
                   }}
@@ -137,8 +137,8 @@ export function StatsChart() {
 
           <Card>
             <CardHeader>
-              <CardTitle>Okuma Serisi Takvimi</CardTitle>
-              <CardDescription>Günlük okuma alışkanlığın</CardDescription>
+              <CardTitle>Oxuma Seriyasi Teqvimi</CardTitle>
+              <CardDescription>Gunluk oxu vərdişin</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-7 gap-2">
@@ -150,7 +150,7 @@ export function StatsChart() {
                       className={`aspect-square rounded-sm border-2 ${
                         hasRead ? "bg-chart-3 border-chart-3" : "bg-muted "
                       }`}
-                      title={hasRead ? "Okuma yapıldı" : "Okuma yapılmadı"}
+                      title={hasRead ? "Oxundu" : "Oxunmadi"}
                     />
                   );
                 })}
@@ -163,7 +163,7 @@ export function StatsChart() {
                   <div className="w-3 h-3 rounded-sm bg-chart-3/60 border"></div>
                   <div className="w-3 h-3 rounded-sm bg-chart-3 border"></div>
                 </div>
-                <span>Çok</span>
+                <span>Cox</span>
               </div>
             </CardContent>
           </Card>

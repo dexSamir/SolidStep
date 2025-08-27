@@ -22,20 +22,20 @@ interface Quest {
 const mockQuests: Quest[] = [
   {
     id: 1,
-    title: "Günlük Oxuma",
-    description: "Bu gün 30 səhifə oxuyun",
+    title: "Gunluk Oxuma",
+    description: "Bu gun 30 sehife oxuyun",
     type: "daily",
     target: 30,
     current: 18,
-    unit: "səhifə",
+    unit: "sehife",
     xpReward: 50,
     isCompleted: false,
     expiresAt: "2024-03-08T23:59:59",
   },
   {
     id: 2,
-    title: "Yeni Janr Kəşfi",
-    description: "Bu gün yeni bir janrdan kitab oxumağa başlayın",
+    title: "Yeni Janr Kesfi",
+    description: "Bu gun yeni bir janrdan kitab oxumağa baslayin",
     type: "daily",
     target: 1,
     current: 0,
@@ -46,8 +46,8 @@ const mockQuests: Quest[] = [
   },
   {
     id: 3,
-    title: "Həftəlik Məqsəd",
-    description: "Bu həftə 2 kitab bitirin",
+    title: "Heftelik Meqsed",
+    description: "Bu hefte 2 kitab bitirin",
     type: "weekly",
     target: 2,
     current: 1,
@@ -58,12 +58,12 @@ const mockQuests: Quest[] = [
   },
   {
     id: 4,
-    title: "Səhər Oxuma",
-    description: "Səhər saatlarında oxuma seansı keçirin",
+    title: "Oxuma Oxuma",
+    description: "Səhər saatlarinda oxuma seansi keçirin",
     type: "daily",
     target: 1,
     current: 1,
-    unit: "səhər seansı",
+    unit: "seher seansi",
     xpReward: 40,
     isCompleted: true,
     expiresAt: "2024-03-08T23:59:59",
@@ -86,8 +86,8 @@ export function Quests() {
     const quest = quests.find((q) => q.id === questId);
     if (quest) {
       toast({
-        title: "Tapşırıq tamamlandı! 🎉",
-        description: `${quest.xpReward} XP qazandınız!`,
+        title: "Tapsiriq tamamlandi! 🎉",
+        description: `${quest.xpReward} XP qazandiniz!`,
       });
     }
   };
@@ -108,11 +108,11 @@ export function Quests() {
 
     if (hours > 24) {
       const days = Math.floor(hours / 24);
-      return `${days} gün qalıb`;
+      return `${days} gun qalib`;
     } else if (hours > 0) {
-      return `${hours}s ${minutes}d qalıb`;
+      return `${hours}s ${minutes}d qalib`;
     } else {
-      return `${minutes}d qalıb`;
+      return `${minutes}d qalib`;
     }
   };
 
@@ -124,7 +124,7 @@ export function Quests() {
       <div>
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <Zap className="h-5 w-5 text-chart-2" />
-          Günlük Tapşırıqlar
+          Gunluk Tapsiriqlar
         </h3>
         <div className="space-y-3">
           {dailyQuests.map((quest) => (
@@ -205,7 +205,7 @@ export function Quests() {
                     {quest.isCompleted && (
                       <div className="flex items-center gap-2 text-sm text-chart-3">
                         <CheckCircle className="h-4 w-4" />
-                        <span>Tamamlandı! +{quest.xpReward} XP</span>
+                        <span>Tamamlandi! +{quest.xpReward} XP</span>
                       </div>
                     )}
                   </div>
@@ -219,7 +219,7 @@ export function Quests() {
       <div>
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <Calendar className="h-5 w-5 text-chart-1" />
-          Həftəlik Tapşırıqlar
+          Heftelik Tapsiriqlar
         </h3>
         <div className="space-y-3">
           {weeklyQuests.map((quest) => (

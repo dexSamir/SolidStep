@@ -29,7 +29,7 @@ export function AuthModal({ onLogin }: AuthModalProps) {
 
     const userData = {
       id: 1,
-      name: formData.name || "Okuyucu",
+      name: formData.name || "Oxuyan",
       email: formData.email,
       hasCompletedOnboarding: false,
       level: 1,
@@ -47,7 +47,9 @@ export function AuthModal({ onLogin }: AuthModalProps) {
           <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
             <BookOpen className="h-8 w-8 text-primary" />
           </div>
-          <CardTitle className="text-2xl helloworld">Okuma Takipçisi</CardTitle>
+          <CardTitle className="text-2xl helloworld">
+            Oxuma Izleyicisi
+          </CardTitle>
           <CardDescription>
             {isLogin ? "Hesabına giriş yap" : "Yeni hesap oluştur"}
           </CardDescription>
@@ -61,7 +63,7 @@ export function AuthModal({ onLogin }: AuthModalProps) {
                 <Input
                   id="name"
                   type="text"
-                  placeholder="Adınızı girin"
+                  placeholder="Adinizi daxil edin"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -72,11 +74,11 @@ export function AuthModal({ onLogin }: AuthModalProps) {
             )}
 
             <div className="space-y-2">
-              <Label htmlFor="email">E-posta</Label>
+              <Label htmlFor="email">E-mail</Label>
               <Input
                 id="email"
                 type="email"
-                placeholder="ornek@email.com"
+                placeholder="example@email.com"
                 value={formData.email}
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, email: e.target.value }))
@@ -86,11 +88,11 @@ export function AuthModal({ onLogin }: AuthModalProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="password">Şifre</Label>
+              <Label htmlFor="password">Sifre</Label>
               <Input
                 id="password"
                 type="password"
-                placeholder="Şifrenizi girin"
+                placeholder="Sifrenizi daxil edin"
                 value={formData.password}
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, password: e.target.value }))
@@ -100,7 +102,7 @@ export function AuthModal({ onLogin }: AuthModalProps) {
             </div>
 
             <Button type="submit" className="w-full">
-              {isLogin ? "Giriş Yap" : "Hesap Oluştur"}
+              {isLogin ? "Giris" : "Hesab Yarat"}
             </Button>
           </form>
 
@@ -111,8 +113,8 @@ export function AuthModal({ onLogin }: AuthModalProps) {
               className="text-sm"
             >
               {isLogin
-                ? "Hesabın yok mu? Kayıt ol"
-                : "Zaten hesabın var mı? Giriş yap"}
+                ? "Hesabiniz yoxdur? Qeydiyyatdan keçin"
+                : "Heasbiniz var? Giriş edin"}
             </Button>
           </div>
         </CardContent>

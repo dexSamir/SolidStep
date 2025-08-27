@@ -38,19 +38,19 @@ export function DailyLogModal({ onSubmit, onClose }: DailyLogModalProps) {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <BookOpen className="h-5 w-5 text-primary" />
-              <CardTitle>Günlük Okuma Kaydet</CardTitle>
+              <CardTitle>Gunluk Oxuma Qeyd Et</CardTitle>
             </div>
             <Button variant="ghost" size="sm" onClick={onClose}>
               <X className="h-4 w-4" />
             </Button>
           </div>
-          <CardDescription>Bugün kaç sayfa okudun?</CardDescription>
+          <CardDescription>Bu gun nece sehife oxudun?</CardDescription>
         </CardHeader>
 
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="pages">Okunan sayfa sayısı</Label>
+              <Label htmlFor="pages">Oxunan sehife sayi</Label>
               <Input
                 id="pages"
                 type="number"
@@ -64,7 +64,7 @@ export function DailyLogModal({ onSubmit, onClose }: DailyLogModalProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="notes">Notlar (isteğe bağlı)</Label>
+              <Label htmlFor="notes">Notlar (optional)</Label>
               <Textarea
                 id="notes"
                 placeholder="Bugünkü okuma deneyimin hakkında notlar..."
@@ -81,10 +81,10 @@ export function DailyLogModal({ onSubmit, onClose }: DailyLogModalProps) {
                 onClick={onClose}
                 className="flex-1 bg-transparent"
               >
-                İptal
+                Legv et
               </Button>
               <Button type="submit" className="flex-1">
-                Kaydet
+                Yadda Saxla
               </Button>
             </div>
           </form>

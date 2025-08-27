@@ -78,7 +78,7 @@ export function LevelUpAnimation({
 
             <div className="space-y-2">
               <h2 className="text-3xl font-bold text-primary">
-                SEVİYE ATLADIN!
+                BIR PILLE YUKSELDIN!
               </h2>
               <div className="flex items-center justify-center gap-2">
                 <Badge
@@ -93,19 +93,19 @@ export function LevelUpAnimation({
             <div className="bg-primary/10 rounded-lg p-4 border border-primary/20">
               <div className="flex items-center justify-center gap-2 text-primary">
                 <Trophy className="h-5 w-5" />
-                <span className="font-semibold">+{xpGained} XP Kazandın!</span>
+                <span className="font-semibold">+{xpGained} XP qazandin!</span>
               </div>
             </div>
 
             <p className="text-muted-foreground">
-              Harika! Okuma yolculuğunda bir adım daha ileri gittin. Devam et!
+              Ela! Oxuma yolunda bir addim daha ireli getdin. Davam et!
             </p>
 
             <Button
               onClick={onClose}
               className="w-full bg-primary hover:bg-primary/90"
             >
-              Devam Et
+              Davam Et
             </Button>
           </CardContent>
         </Card>

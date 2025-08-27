@@ -38,15 +38,15 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
 
   const genres = [
     "Roman",
-    "Bilim Kurgu",
+    "Science Fiction",
     "Fantastik",
-    "Tarih",
-    "Biyografi",
+    "Tarix",
+    "Biografiya",
     "Felsefe",
-    "Psikoloji",
-    "İş & Kariyer",
-    "Kişisel Gelişim",
-    "Şiir",
+    "Psixoloji",
+    "İs & Karyera",
+    "Personal Development",
+    "Seir",
   ];
 
   return (
@@ -56,9 +56,9 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
           <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
             <Target className="h-8 w-8 text-primary" />
           </div>
-          <CardTitle className="text-2xl">Okuma Hedeflerini Belirle</CardTitle>
+          <CardTitle className="text-2xl">Oxuma Meqsedlerini Sec</CardTitle>
           <CardDescription>
-            Kişiselleştirilmiş deneyim için hedeflerini ayarla
+            Sexsilesdirilmis tecrube ucun hedeflerini sec
           </CardDescription>
         </CardHeader>
 
@@ -71,7 +71,7 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
                   className="flex items-center gap-2"
                 >
                   <BookOpen className="h-4 w-4" />
-                  Yıllık kitap hedefin kaç?
+                  Illik oxu meqsedin necedir?
                 </Label>
                 <Input
                   id="yearly-goal"
@@ -87,14 +87,14 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
                   }
                 />
                 <p className="text-xs text-muted-foreground">
-                  Ortalama: Yılda 12-24 kitap
+                  Ortalama: Ilde 12-24 kitab
                 </p>
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="daily-goal" className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  Günlük sayfa hedefin kaç?
+                  Gunluk oxu meqsedin necedir?
                 </Label>
                 <Input
                   id="daily-goal"
@@ -110,7 +110,7 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
                   }
                 />
                 <p className="text-xs text-muted-foreground">
-                  Ortalama: Günde 15-30 sayfa
+                  Ortalama: Gunde 15-30 sehife
                 </p>
               </div>
             </div>
@@ -119,7 +119,7 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
           {step === 2 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <Label>Tercih ettiğin türler (en fazla 3)</Label>
+                <Label>Sevdiyin janrlar (en cox 3)</Label>
                 <div className="grid grid-cols-2 gap-2">
                   {genres.map((genre) => (
                     <Button
@@ -149,7 +149,7 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
               </div>
 
               <div className="space-y-2">
-                <Label>Genellikle ne zaman okursun?</Label>
+                <Label>Oxuma vaxtin adeten ne vaxtdir?</Label>
                 <Select
                   value={goals.readingTime}
                   onValueChange={(value) =>
@@ -160,11 +160,11 @@ export function OnboardingModal({ onComplete, onClose }: OnboardingModalProps) {
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="morning">Sabah</SelectItem>
-                    <SelectItem value="afternoon">Öğleden sonra</SelectItem>
-                    <SelectItem value="evening">Akşam</SelectItem>
+                    <SelectItem value="morning">Seher</SelectItem>
+                    <SelectItem value="afternoon">Gunortadan Sonra</SelectItem>
+                    <SelectItem value="evening">Axsam</SelectItem>
                     <SelectItem value="night">Gece</SelectItem>
-                    <SelectItem value="anytime">Her zaman</SelectItem>
+                    <SelectItem value="anytime">Hemise</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
