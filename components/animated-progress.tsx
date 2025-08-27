@@ -59,7 +59,7 @@ export function AnimatedProgress({
         )}
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes progress-shine {
           0% {
             transform: translateX(-100%);

@@ -4,8 +4,10 @@ import { Moon, Sun } from "lucide-react";
 
 export function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const savedTheme = localStorage.getItem("reading-tracker-theme");
     const prefersDark = window.matchMedia(
       "(prefers-color-scheme: dark)"
@@ -34,14 +36,22 @@ export function ThemeToggle() {
     }
   };
 
+  if (!mounted) {
+    return <Button variant="ghost" size="icon" className="h-9 w-9" />;
+  }
+
   return (
     <Button
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="h-9 w-9"
+      className="h-9 w-9 transition-all duration-200 hover:bg-primary/10"
     >
-      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      {isDark ? (
+        <Sun className="h-4 w-4 text-primary transition-transform duration-200 rotate-0 scale-100" />
+      ) : (
+        <Moon className="h-4 w-4 text-primary transition-transform duration-200 rotate-0 scale-100" />
+      )}
       <span className="sr-only">Toggle theme</span>
     </Button>
   );

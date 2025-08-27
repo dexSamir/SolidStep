@@ -109,7 +109,6 @@ export function BadgeSystem({
   const { toast } = useToast();
 
   useEffect(() => {
-    // Check for newly earned badges
     BADGE_DEFINITIONS.forEach((badge) => {
       const alreadyEarned = earnedBadges.some(
         (earned) => earned.badgeId === badge.id
@@ -124,7 +123,7 @@ export function BadgeSystem({
     });
   }, [userStats, earnedBadges, onBadgeEarned, toast]);
 
-  return null; // This component only handles logic
+  return null;
 }
 
 export function BadgeGallery({
@@ -249,7 +248,7 @@ export function RecentAwards({
 
           return (
             <div
-              key={earnedBadge.badgeId}
+              key={`${earnedBadge.badgeId}-${earnedBadge.earnedAt.getTime()}`}
               className="flex items-center gap-3 p-2 rounded-lg bg-accent/5"
             >
               <div className="p-1.5 bg-accent/10 rounded-md text-accent">
