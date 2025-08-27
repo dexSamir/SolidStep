@@ -4,12 +4,12 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "../../components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
+} from "../../components/ui/chart";
 import {
   LineChart,
   Line,
@@ -27,7 +27,6 @@ interface StatsChartProps {
 }
 
 export function StatsChart({ books, userStats }: StatsChartProps) {
-  // Generate mock data for charts
   const weeklyData = [
     { day: "B.e", pages: 15 },
     { day: "Ç.a", pages: 23 },
