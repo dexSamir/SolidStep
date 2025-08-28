@@ -63,7 +63,7 @@ export function AddBookModal({ onAdd, onClose }: AddBookModalProps) {
               <Label htmlFor="title">Kitab adi</Label>
               <Input
                 id="title"
-                placeholder="Örn: Cinayet ve Ceza"
+                placeholder="Mes: Cinayet ve Ceza"
                 value={formData.title}
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, title: e.target.value }))
@@ -73,10 +73,10 @@ export function AddBookModal({ onAdd, onClose }: AddBookModalProps) {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="author">Yazar</Label>
+              <Label htmlFor="author">Yazici</Label>
               <Input
                 id="author"
-                placeholder="Örn: Fyodor Dostoyevski"
+                placeholder="Mes: Fyodor Dostoyevski"
                 value={formData.author}
                 onChange={(e) =>
                   setFormData((prev) => ({ ...prev, author: e.target.value }))
@@ -91,7 +91,7 @@ export function AddBookModal({ onAdd, onClose }: AddBookModalProps) {
                 id="pages"
                 type="number"
                 min="1"
-                placeholder="Örn: 671"
+                placeholder="Mes: 671"
                 value={formData.totalPages}
                 onChange={(e) =>
                   setFormData((prev) => ({

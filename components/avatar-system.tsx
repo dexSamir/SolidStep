@@ -253,7 +253,7 @@ export function AvatarManager({
             <div className="flex-1">
               <p className="font-medium">{userName}</p>
               <p className="text-sm text-muted-foreground">
-                {currentAvatar ? "Özel avatar" : "Varsayılan avatar"}
+                {currentAvatar ? "Xususi avatar" : "Default avatar"}
               </p>
             </div>
           </div>

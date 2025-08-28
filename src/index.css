@@ -4,77 +4,77 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 30 25% 25%;
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
 
     --card: 0 0% 100%;
-    --card-foreground: 30 25% 25%;
+    --card-foreground: 215 25% 27%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 30 25% 25%;
+    --popover-foreground: 215 25% 27%;
 
-    --primary: 38 92% 50%;
+    --primary: 210 100% 12%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 30 15% 92%;
-    --secondary-foreground: 30 25% 25%;
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 215 25% 27%;
 
-    --muted: 30 10% 95%;
-    --muted-foreground: 30 15% 45%;
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 19 56% 40%;
+    --accent: 187 100% 42%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 20% 88%;
-    --input: 30 20% 88%;
-    --ring: 38 92% 50%;
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 100% 12%;
 
     --radius: 0.5rem;
 
-    --warm-gold: 38 92% 50%;
-    --rich-brown: 30 25% 25%;
-    --soft-cream: 30 15% 96%;
-    --sienna: 19 56% 40%;
-    --light-amber: 45 100% 95%;
+    --midnight-blue: 210 100% 12%;
+    --soft-cyan: 187 100% 42%;
+    --slate-gray: 215 15% 50%;
+    --light-slate: 210 20% 96%;
+    --charcoal: 215 25% 27%;
   }
 
   .dark {
-    --background: 30 15% 8%;
-    --foreground: 30 15% 92%;
+    --background: 215 28% 8%;
+    --foreground: 210 20% 92%;
 
-    --card: 30 15% 10%;
-    --card-foreground: 30 15% 92%;
+    --card: 215 28% 10%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 30 15% 10%;
-    --popover-foreground: 30 15% 92%;
+    --popover: 215 28% 10%;
+    --popover-foreground: 210 20% 92%;
 
-    --primary: 38 92% 50%;
-    --primary-foreground: 30 15% 8%;
+    --primary: 210 100% 20%;
+    --primary-foreground: 210 20% 98%;
 
-    --secondary: 30 15% 15%;
-    --secondary-foreground: 30 15% 85%;
+    --secondary: 215 28% 15%;
+    --secondary-foreground: 210 20% 85%;
 
-    --muted: 30 15% 12%;
-    --muted-foreground: 30 15% 65%;
+    --muted: 215 28% 12%;
+    --muted-foreground: 210 15% 65%;
 
-    --accent: 19 56% 45%;
-    --accent-foreground: 30 15% 92%;
+    --accent: 187 100% 50%;
+    --accent-foreground: 215 28% 8%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 30 15% 18%;
-    --input: 30 15% 18%;
-    --ring: 38 92% 50%;
+    --border: 215 28% 18%;
+    --input: 215 28% 18%;
+    --ring: 210 100% 20%;
 
-    --warm-gold: 38 92% 55%;
-    --rich-brown: 30 15% 85%;
-    --soft-cream: 30 15% 12%;
-    --sienna: 19 56% 50%;
-    --light-amber: 30 15% 10%;
+    --midnight-blue: 210 100% 25%;
+    --soft-cyan: 187 100% 55%;
+    --slate-gray: 210 15% 70%;
+    --light-slate: 215 28% 12%;
+    --charcoal: 210 20% 85%;
   }
 }
 
@@ -167,7 +167,6 @@
   }
 }
 
-/* Custom utility classes */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -177,35 +176,39 @@
     text-wrap: pretty;
   }
 
-  .bg-warm-gold {
-    background-color: hsl(var(--warm-gold));
+  .bg-midnight-blue {
+    background-color: hsl(var(--midnight-blue));
   }
 
-  .text-warm-gold {
-    color: hsl(var(--warm-gold));
+  .text-midnight-blue {
+    color: hsl(var(--midnight-blue));
   }
 
-  .bg-rich-brown {
-    background-color: hsl(var(--rich-brown));
+  .bg-soft-cyan {
+    background-color: hsl(var(--soft-cyan));
   }
 
-  .text-rich-brown {
-    color: hsl(var(--rich-brown));
+  .text-soft-cyan {
+    color: hsl(var(--soft-cyan));
   }
 
-  .bg-soft-cream {
-    background-color: hsl(var(--soft-cream));
+  .bg-slate-gray {
+    background-color: hsl(var(--slate-gray));
   }
 
-  .bg-sienna {
-    background-color: hsl(var(--sienna));
+  .text-slate-gray {
+    color: hsl(var(--slate-gray));
   }
 
-  .text-sienna {
-    color: hsl(var(--sienna));
+  .bg-light-slate {
+    background-color: hsl(var(--light-slate));
   }
 
-  .bg-light-amber {
-    background-color: hsl(var(--light-amber));
+  .bg-charcoal {
+    background-color: hsl(var(--charcoal));
+  }
+
+  .text-charcoal {
+    color: hsl(var(--charcoal));
   }
 }
